@@ -71,7 +71,7 @@ export default function Landing() {
 
         return prev - 1;
       });
-    }, 1000);
+    }, 9000);
 
     return () => clearInterval(timer);
   }, []);
@@ -124,12 +124,12 @@ export default function Landing() {
                 className="
                   text-[15px]
                   sm:text-[18px]
-                  font-extrabold
+                  font-bold
                   tracking-[-0.3px]
                   text-[#111318]
                 "
               >
-                RADHE BOOK
+                RADHE  BOOK
               </div>
 
               <div
@@ -274,7 +274,7 @@ export default function Landing() {
                   text-[#ffd400]
                   text-[11px]
                   sm:text-[14px]
-                  font-extrabold
+                  
                   tracking-[3px]
                 "
               >
@@ -316,7 +316,7 @@ export default function Landing() {
                   sm:h-[115px]
 
                   rounded-full
-                  border-[5px]
+                  border-[2px]
                   sm:border-[7px]
                   border-white
 
@@ -341,10 +341,10 @@ export default function Landing() {
               <div className="flex items-center justify-center flex-shrink-0">
                 <h1
                   className="
-                    text-[22px]
-                    sm:text-[27px]
+                    text-[18px]
+                    sm:text-[22px]
                     leading-none
-                    font-extrabold
+                    font-bold
                     tracking-[-0.6px]
                     text-[#101318]
                   "
@@ -352,32 +352,32 @@ export default function Landing() {
                   Radhe Book
                 </h1>
 
-                <span
-                  className="
-                    ml-[6px]
-                    w-[21px]
-                    h-[21px]
-                    sm:w-[25px]
-                    sm:h-[25px]
-                    rounded-full
-                    bg-[#1685f8]
-                    text-white
-                    flex items-center justify-center
-                    text-[12px]
-                    sm:text-[15px]
-                    font-black
-                  "
-                >
-                  ✓
-                </span>
+              <span
+                className="
+                  ml-[6px]
+                  w-[20px]
+                  h-[20px]
+                  sm:w-[25px]
+                  sm:h-[25px]
+                  bg-[#1685f8]
+                  text-white
+                  flex items-center justify-center
+                  text-[12px]
+                  sm:text-[15px]
+                  font-black
+                  [clip-path:polygon(50%_0%,61%_8%,73%_5%,82%_15%,94%_18%,95%_31%,100%_40%,94%_50%,100%_60%,95%_69%,94%_82%,82%_85%,73%_95%,61%_92%,50%_100%,39%_92%,27%_95%,18%_85%,6%_82%,5%_69%,0%_60%,6%_50%,0%_40%,5%_31%,6%_18%,18%_15%,27%_5%,39%_8%)]
+                "
+              >
+                ✓
+              </span>
               </div>
 
               {/* USERNAME */}
               <div
                 className="
                   mt-[7px]
-                  text-[14px]
-                  sm:text-[17px]
+                  text-[12px]
+                  sm:text-[15px]
                   text-[#68727d]
                   font-medium
                   flex-shrink-0
@@ -392,7 +392,7 @@ export default function Landing() {
                   inline-flex
                   items-center
                   justify-center
-                  mt-[13px]
+                  mt-[14px]
                   sm:mt-[20px]
                   min-h-[40px]
                   sm:min-h-[48px]
@@ -402,10 +402,10 @@ export default function Landing() {
                   bg-[#f1f4f3]
                   text-[12px]
                   sm:text-[15px]
-                  font-bold
+                  mb-[16px]
                   text-[#151a20]
                   flex-shrink-0
-                  mb-4
+                  
                 "
               >
                 Your Support contact desk
@@ -414,8 +414,8 @@ export default function Landing() {
               {/* DESCRIPTION */}
               <p
                 className="
-                  mt-[12px]
-                  mb-[12px]
+                  mt-[14px]
+                  mb-[14px]
                   sm:mt-[18px]
                   sm:mb-[18px]
 
@@ -426,7 +426,7 @@ export default function Landing() {
                   sm:leading-[1.55]
 
                   text-[#6d757d]
-                  font-medium
+                  
                   flex-shrink-0
                   
                 "
@@ -437,77 +437,76 @@ export default function Landing() {
                 Let's get the conversation started.
               </p>
 
-              {/* WHATSAPP BUTTON */}
-              <button
-                onClick={openWhatsApp}
-                className="
-                  w-full
-                  h-[40px]
-                  sm:h-[50px]
 
-                  rounded-[16px]
-                  sm:rounded-[18px]
+{/* WHATSAPP BUTTON */}
+<button
+  onClick={openWhatsApp}
+  className="
+    w-[75%]
+    h-[38px]
+    sm:h-[44px]
 
-                  bg-[#050505]
-                  text-white
+    rounded-[10px]
+    sm:rounded-[12px]
 
-                  flex items-center
-                  px-[16px]
-                  sm:px-[22px]
+    bg-[#075E54]
+    text-white
 
-                  shadow-[0_6px_18px_rgba(0,0,0,0.12)]
+    flex
+    items-center
 
-                  active:scale-[0.99]
-                  transition
+    px-[14px]
+    sm:px-[18px]
 
-                  flex-shrink-0
-                  mt-2
-                "
-              >
-                {/* Icon */}
-                <div className="flex-shrink-0">
-                  <WhatsAppIcon />
-                </div>
+    shadow-[0_4px_12px_rgba(0,0,0,0.15)]
 
-                {/* Divider */}
-                <div
-                  className="
-                    h-[28px]
-                    sm:h-[36px]
-                    w-[1px]
-                    bg-[#555]
-                    ml-[14px]
-                    mr-[14px]
-                    sm:ml-[20px]
-                    sm:mr-[20px]
-                  "
-                />
+    active:scale-[0.99]
+    transition
 
-                {/* Text */}
-                <span
-                  className="
-                    flex-1
-                    text-left
-                    text-[16px]
-                    sm:text-[19px]
-                    font-extrabold
-                  "
-                >
-                  Chat on WhatsApp
-                </span>
+    flex-shrink-0
+    mt-5
+  "
+>
+  {/* MESSAGE ICON */}
+  <svg
+    viewBox="0 0 24 24"
+    className="
+      w-[21px]
+      h-[21px]
+      sm:w-[23px]
+      sm:h-[23px]
+      flex-shrink-0
+    "
+    fill="white"
+  >
+    <path d="M12 3C6.48 3 2 6.58 2 11c0 2.45 1.38 4.63 3.58 6.08L4.5 21l4.05-2.03c1.08.33 2.23.5 3.45.5 5.52 0 10-3.58 10-8.47C22 6.58 17.52 3 12 3Z" />
+  </svg>
 
-                {/* Arrow */}
-                <span
-                  className="
-                    text-[25px]
-                    sm:text-[30px]
-                    font-light
-                    leading-none
-                  "
-                >
-                  →
-                </span>
-              </button>
+  {/* TEXT */}
+  <span
+    className="
+      flex-1
+      text-center
+      text-[14px]
+      sm:text-[16px]
+      font-bold
+    "
+  >
+    Chat on WhatsApp
+  </span>
+
+  {/* ARROW */}
+  <span
+    className="
+      text-[20px]
+      sm:text-[23px]
+      font-medium
+      leading-none
+    "
+  >
+    →
+  </span>
+</button>
 
               {/* Opens WhatsApp */}
               <div
@@ -533,6 +532,7 @@ export default function Landing() {
                   my-[10px]
                   sm:my-[15px]
                   flex-shrink-0
+                  mt-[18px]
                 "
               />
 
@@ -556,9 +556,7 @@ export default function Landing() {
                 </div>
 
                 <span>
-                  Continue in your app or on WhatsApp
-                  <br />
-                  Web
+                  Continue in your app or on WhatsApp Web
                 </span>
               </div>
 
