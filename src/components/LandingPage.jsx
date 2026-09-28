@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo3.png";
+
 const WHATSAPP_NUMBER = "919876543210";
 
 const WHATSAPP_MESSAGE =
@@ -13,12 +14,12 @@ const openWhatsApp = () => {
   window.location.href = url;
 };
 
-// WhatsApp SVG Icon
+// WhatsApp Icon
 const WhatsAppIcon = () => {
   return (
     <svg
       viewBox="0 0 32 32"
-      className="w-[34px] h-[34px]"
+      className="w-[28px] h-[28px] sm:w-[32px] sm:h-[32px]"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -37,12 +38,12 @@ const WhatsAppIcon = () => {
   );
 };
 
-// External Link Icon
+// External Icon
 const ExternalIcon = () => {
   return (
     <svg
       viewBox="0 0 24 24"
-      className="w-[24px] h-[24px]"
+      className="w-[20px] h-[20px]"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
@@ -70,50 +71,44 @@ export default function Landing() {
 
         return prev - 1;
       });
-    }, 2000);
+    }, 1000);
 
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#f4f5f5] text-[#111] flex justify-center">
+    <div className="h-[100dvh] w-full overflow-hidden bg-[#f4f5f5] text-[#111] flex justify-center">
 
       {/* MOBILE CONTAINER */}
-      <div className="w-full max-w-[600px] min-h-screen bg-white">
+      <div className="h-[100dvh] w-full max-w-[600px] bg-white flex flex-col overflow-hidden">
 
-        {/* =====================================================
-            HEADER
-        ====================================================== */}
+        {/* HEADER */}
         <header
           className="
-            h-[108px]
-            px-[32px]
-            flex
-            items-center
-            justify-between
+            flex-shrink-0
+            h-[72px]
+            sm:h-[82px]
+            px-[16px]
+            sm:px-[24px]
+            flex items-center justify-between
             bg-white
-            border-b
-            border-[#eeeeee]
+            border-b border-[#eeeeee]
           "
         >
+          <div className="flex items-center gap-[9px] sm:gap-[12px] min-w-0">
 
-          {/* LEFT */}
-          <div className="flex items-center gap-[14px]">
-
-            {/* Your Logo */}
+            {/* Logo */}
             <div
               className="
-                w-[65px]
-                h-[65px]
+                w-[43px] h-[43px]
+                sm:w-[52px] sm:h-[52px]
                 rounded-full
                 bg-black
-                flex
-                items-center
-                justify-center
-                border
-                border-[#eeeeee]
+                flex items-center justify-center
+                border border-[#eeeeee]
                 shadow-sm
                 overflow-hidden
+                flex-shrink-0
               "
             >
               <img
@@ -124,12 +119,13 @@ export default function Landing() {
             </div>
 
             {/* Brand */}
-            <div>
+            <div className="min-w-0">
               <div
                 className="
-                  text-[20px]
+                  text-[15px]
+                  sm:text-[18px]
                   font-extrabold
-                  tracking-[-0.4px]
+                  tracking-[-0.3px]
                   text-[#111318]
                 "
               >
@@ -138,253 +134,257 @@ export default function Landing() {
 
               <div
                 className="
-                  mt-[5px]
-                  text-[12px]
+                  mt-[2px]
+                  text-[8px]
+                  sm:text-[10px]
                   font-semibold
-                  tracking-[4px]
+                  tracking-[2.5px]
                   text-[#89919a]
                 "
               >
                 CONTACT DESK
               </div>
             </div>
-
           </div>
 
-          {/* CONNECT BUTTON */}
+          {/* Connect */}
           <button
             onClick={openWhatsApp}
             className="
-              h-[48px]
-              px-[20px]
+              h-[38px]
+              sm:h-[44px]
+              px-[13px]
+              sm:px-[18px]
               rounded-full
-              border-[2px]
+              border-[1.5px]
               border-[#d5d8dc]
               bg-white
-              text-[15px]
+              text-[11px]
+              sm:text-[14px]
               font-bold
               whitespace-nowrap
-              hover:bg-[#f7f7f7]
               active:scale-[0.98]
               transition
+              flex-shrink-0
             "
           >
             Let's connect
           </button>
-
         </header>
 
-
-        {/* =====================================================
-            MAIN BACKGROUND
-        ====================================================== */}
+        {/* MAIN */}
         <main
           className="
-            min-h-[calc(100vh-108px)]
+            flex-1
+            min-h-0
             bg-[#f5f7f6]
-            px-[18px]
-            pt-[30px]
-            pb-[45px]
+            px-[10px]
+            sm:px-[18px]
+            py-[10px]
+            sm:py-[16px]
+            overflow-hidden
           "
         >
-
-          {/* MAIN CARD */}
+          {/* CARD */}
           <div
             className="
+              h-full
               w-full
               overflow-hidden
-              rounded-[30px]
+              rounded-[20px]
+              sm:rounded-[28px]
               bg-white
-              shadow-[0_8px_35px_rgba(0,0,0,0.06)]
+              shadow-[0_5px_25px_rgba(0,0,0,0.06)]
+              flex flex-col
             "
           >
 
-            {/* =================================================
-                BLACK COVER
-            ================================================== */}
+            {/* COVER */}
             <section
               className="
                 relative
-                h-[285px]
+                flex-shrink-0
+                h-[150px]
+                sm:h-[210px]
                 overflow-hidden
                 bg-[#050505]
               "
             >
-
-              {/* Background circles */}
+              {/* Circles */}
               <div
                 className="
                   absolute
-                  w-[470px]
-                  h-[470px]
+                  w-[300px]
+                  h-[300px]
                   rounded-full
-                  border
-                  border-[#ffffff0d]
-                  -right-[190px]
-                  -top-[245px]
+                  border border-[#ffffff0d]
+                  -right-[130px]
+                  -top-[170px]
                 "
               />
 
               <div
                 className="
                   absolute
-                  w-[350px]
-                  h-[350px]
+                  w-[230px]
+                  h-[230px]
                   rounded-full
-                  border
-                  border-[#ffffff0d]
-                  -right-[120px]
-                  -top-[185px]
+                  border border-[#ffffff0d]
+                  -right-[90px]
+                  -top-[130px]
                 "
               />
 
               <div
                 className="
                   absolute
-                  w-[250px]
-                  h-[250px]
+                  w-[170px]
+                  h-[170px]
                   rounded-full
-                  border
-                  border-[#ffffff08]
-                  right-[15px]
-                  -top-[135px]
+                  border border-[#ffffff08]
+                  right-[10px]
+                  -top-[100px]
                 "
               />
 
-              {/* Top title */}
+              {/* Title */}
               <div
                 className="
                   absolute
-                  top-[36px]
-                  left-[38px]
+                  top-[20px]
+                  left-[22px]
                   z-10
                   text-white
-                  text-[14px]
+                  text-[10px]
+                  sm:text-[13px]
                   font-bold
-                  tracking-[4px]
+                  tracking-[2.5px]
                 "
               >
                 LET'S KEEP IN TOUCH
               </div>
 
-              {/* Right Brand */}
+              {/* Brand */}
               <div
                 className="
                   absolute
-                  right-[36px]
-                  bottom-[105px]
+                  right-[22px]
+                  bottom-[28px]
                   z-10
                   text-[#ffd400]
-                  text-[15px]
+                  text-[11px]
+                  sm:text-[14px]
                   font-extrabold
-                  tracking-[4px]
+                  tracking-[3px]
                 "
               >
                 RADHEBOOK
               </div>
-
             </section>
 
-
-            {/* =================================================
-                PROFILE CONTENT
-            ================================================== */}
+            {/* PROFILE */}
             <section
               className="
                 relative
+                flex-1
+                min-h-0
                 text-center
-                px-[20px]
-                pb-[42px]
+                px-[15px]
+                sm:px-[20px]
+                pt-0
+                pb-[10px]
+                flex
+                flex-col
+                items-center
               "
             >
 
-              {/* PROFILE LOGO */}
+              {/* Profile Logo */}
               <div
                 className="
                   relative
                   z-20
-                  mx-auto
-                  -mt-[67px]
-                  mb-[24px]
+                  -mt-[43px]
+                  sm:-mt-[55px]
+                  mb-[10px]
+                  sm:mb-[15px]
 
-                  w-[142px]
-                  h-[142px]
+                  w-[90px]
+                  h-[90px]
+
+                  sm:w-[115px]
+                  sm:h-[115px]
 
                   rounded-full
-                  border-[8px]
+                  border-[5px]
+                  sm:border-[7px]
                   border-white
 
                   bg-black
 
-                  shadow-[0_7px_22px_rgba(0,0,0,0.18)]
+                  shadow-[0_5px_18px_rgba(0,0,0,0.18)]
 
-                  flex
-                  items-center
-                  justify-center
+                  flex items-center justify-center
 
                   overflow-hidden
+                  flex-shrink-0
                 "
               >
-
-                {/* Your Logo */}
                 <img
                   src={logo}
                   alt="Radhe Book"
                   className="w-full h-full object-contain"
                 />
-
               </div>
 
-
               {/* NAME */}
-              <div className="flex items-center justify-center">
-
+              <div className="flex items-center justify-center flex-shrink-0">
                 <h1
                   className="
-                    text-[29px]
+                    text-[22px]
+                    sm:text-[27px]
                     leading-none
                     font-extrabold
-                    tracking-[-0.8px]
+                    tracking-[-0.6px]
                     text-[#101318]
                   "
                 >
                   Radhe Book
                 </h1>
 
-                {/* Verification Badge */}
                 <span
                   className="
-                    ml-[8px]
-                    w-[28px]
-                    h-[28px]
+                    ml-[6px]
+                    w-[21px]
+                    h-[21px]
+                    sm:w-[25px]
+                    sm:h-[25px]
                     rounded-full
                     bg-[#1685f8]
                     text-white
-                    flex
-                    items-center
-                    justify-center
-                    text-[17px]
+                    flex items-center justify-center
+                    text-[12px]
+                    sm:text-[15px]
                     font-black
                   "
                 >
                   ✓
                 </span>
-
               </div>
-
 
               {/* USERNAME */}
               <div
                 className="
-                  mt-[16px]
-                  text-[18px]
+                  mt-[7px]
+                  text-[14px]
+                  sm:text-[17px]
                   text-[#68727d]
                   font-medium
+                  flex-shrink-0
                 "
               >
                 @RadheBookcommunity
               </div>
-
 
               {/* SUPPORT LABEL */}
               <div
@@ -392,36 +392,41 @@ export default function Landing() {
                   inline-flex
                   items-center
                   justify-center
-
-                  mt-[34px]
-
-                  min-h-[57px]
-                  px-[35px]
-
-                  rounded-[18px]
-
+                  mt-[13px]
+                  sm:mt-[20px]
+                  min-h-[40px]
+                  sm:min-h-[48px]
+                  px-[20px]
+                  sm:px-[30px]
+                  rounded-[14px]
                   bg-[#f1f4f3]
-
-                  text-[16px]
+                  text-[12px]
+                  sm:text-[15px]
                   font-bold
                   text-[#151a20]
+                  flex-shrink-0
                 "
               >
                 Your Support contact desk
               </div>
 
-
               {/* DESCRIPTION */}
               <p
                 className="
-                  mt-[30px]
-                  mb-[28px]
+                  mt-[12px]
+                  mb-[12px]
+                  sm:mt-[18px]
+                  sm:mb-[18px]
 
-                  text-[18px]
-                  leading-[1.65]
+                  text-[13px]
+                  sm:text-[17px]
+
+                  leading-[1.4]
+                  sm:leading-[1.55]
 
                   text-[#6d757d]
                   font-medium
+                  flex-shrink-0
                 "
               >
                 Say hello. Ask a question.
@@ -429,103 +434,103 @@ export default function Landing() {
                 Let's get the conversation started.
               </p>
 
-
-              {/* =================================================
-                  WHATSAPP BUTTON
-              ================================================== */}
+              {/* WHATSAPP BUTTON */}
               <button
                 onClick={openWhatsApp}
                 className="
                   w-full
-                  h-[50px]
+                  h-[48px]
+                  sm:h-[56px]
 
-                  rounded-[20px]
+                  rounded-[16px]
+                  sm:rounded-[18px]
 
                   bg-[#050505]
-
                   text-white
 
-                  flex
-                  items-center
+                  flex items-center
+                  px-[16px]
+                  sm:px-[22px]
 
-                  px-[25px]
-
-                  shadow-[0_8px_22px_rgba(0,0,0,0.12)]
+                  shadow-[0_6px_18px_rgba(0,0,0,0.12)]
 
                   active:scale-[0.99]
-                  hover:bg-[#101010]
-
                   transition
+
+                  flex-shrink-0
                 "
               >
-
                 {/* Icon */}
                 <div className="flex-shrink-0">
                   <WhatsAppIcon />
                 </div>
 
-
                 {/* Divider */}
                 <div
                   className="
-                    h-[38px]
+                    h-[28px]
+                    sm:h-[36px]
                     w-[1px]
                     bg-[#555]
-                    ml-[22px]
-                    mr-[22px]
+                    ml-[14px]
+                    mr-[14px]
+                    sm:ml-[20px]
+                    sm:mr-[20px]
                   "
                 />
-
 
                 {/* Text */}
                 <span
                   className="
                     flex-1
                     text-left
-                    text-[20px]
+                    text-[16px]
+                    sm:text-[19px]
                     font-extrabold
                   "
                 >
                   Chat on WhatsApp
                 </span>
 
-
                 {/* Arrow */}
                 <span
                   className="
-                    text-[32px]
+                    text-[25px]
+                    sm:text-[30px]
                     font-light
                     leading-none
                   "
                 >
                   →
                 </span>
-
               </button>
 
-
-              {/* OPEN WHATSAPP */}
+              {/* Opens WhatsApp */}
               <div
                 className="
-                  mt-[24px]
-                  text-[16px]
+                  mt-[8px]
+                  sm:mt-[12px]
+                  text-[11px]
+                  sm:text-[14px]
                   text-[#818a92]
                   font-medium
+                  flex-shrink-0
                 "
               >
                 Opens WhatsApp
               </div>
 
-
-              {/* DIVIDER */}
+              {/* Divider */}
               <div
                 className="
+                  w-full
                   h-[1px]
                   bg-[#e2e5e4]
-                  my-[27px]
+                  my-[10px]
+                  sm:my-[15px]
+                  flex-shrink-0
                 "
               />
-
 
               {/* CONTINUE */}
               <div
@@ -533,59 +538,56 @@ export default function Landing() {
                   flex
                   items-center
                   justify-center
-                  gap-[18px]
-                  text-[17px]
-                  leading-[1.5]
+                  gap-[10px]
+                  text-[12px]
+                  sm:text-[15px]
+                  leading-[1.35]
                   font-bold
                   text-[#1b2026]
+                  flex-shrink-0
                 "
               >
-
                 <div className="flex-shrink-0">
                   <ExternalIcon />
                 </div>
 
                 <span>
                   Continue in your app or on WhatsApp
-                  <br className="sm:hidden" />
+                  <br />
                   Web
                 </span>
-
               </div>
-
 
               {/* COUNTDOWN */}
               <div
                 className="
-                  mt-[27px]
-                  text-[16px]
+                  mt-[8px]
+                  sm:mt-[12px]
+                  text-[11px]
+                  sm:text-[14px]
                   text-[#7d858d]
                   font-medium
+                  flex-shrink-0
                 "
               >
                 Redirecting to WhatsApp in{" "}
-
                 <strong
                   className="
                     text-[#15191e]
                     font-extrabold
-                    text-[19px]
+                    text-[14px]
+                    sm:text-[17px]
                   "
                 >
                   {seconds}
-                </strong>
-
-                {" "}seconds...
+                </strong>{" "}
+                seconds...
               </div>
 
             </section>
-
           </div>
-
         </main>
-
       </div>
-
     </div>
   );
 }
