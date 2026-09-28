@@ -405,6 +405,7 @@ export default function Landing() {
                   font-bold
                   text-[#151a20]
                   flex-shrink-0
+                  mb-4
                 "
               >
                 Your Support contact desk
@@ -427,10 +428,12 @@ export default function Landing() {
                   text-[#6d757d]
                   font-medium
                   flex-shrink-0
+                  
                 "
               >
                 Say hello. Ask a question.
                 <br />
+                
                 Let's get the conversation started.
               </p>
 
@@ -439,8 +442,8 @@ export default function Landing() {
                 onClick={openWhatsApp}
                 className="
                   w-full
-                  h-[48px]
-                  sm:h-[56px]
+                  h-[40px]
+                  sm:h-[50px]
 
                   rounded-[16px]
                   sm:rounded-[18px]
@@ -458,6 +461,7 @@ export default function Landing() {
                   transition
 
                   flex-shrink-0
+                  mt-2
                 "
               >
                 {/* Icon */}
