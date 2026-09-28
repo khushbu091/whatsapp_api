@@ -71,7 +71,7 @@ export default function Landing() {
 
         return prev - 1;
       });
-    }, 9000);
+    }, 2000);
 
     return () => clearInterval(timer);
   }, []);
