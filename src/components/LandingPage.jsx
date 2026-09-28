@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo3.png";
 
-const WHATSAPP_NUMBER = "919876543210";
+const WHATSAPP_NUMBER = "447476504525";
 
 const WHATSAPP_MESSAGE =
   "Hello, I want to contact the support desk.";
@@ -438,75 +438,81 @@ export default function Landing() {
               </p>
 
 
-{/* WHATSAPP BUTTON */}
-<button
-  onClick={openWhatsApp}
-  className="
-    w-[75%]
-    h-[38px]
-    sm:h-[44px]
+                {/* WHATSAPP BUTTON */}
+                <button
+                  onClick={() => {
+                    window.open(
+                      "https://wa.me/message/GPBFVXAHITRMG1",
+                      "_blank"
+                    );
+                  }}
+                  className="
+                    w-[75%]
+                    h-[38px]
+                    sm:h-[44px]
 
-    rounded-[10px]
-    sm:rounded-[12px]
+                    rounded-[10px]
+                    sm:rounded-[12px]
 
-    bg-[#075E54]
-    text-white
+                    bg-[#075E54]
+                    text-white
 
-    flex
-    items-center
+                    flex
+                    items-center
 
-    px-[14px]
-    sm:px-[18px]
+                    px-[14px]
+                    sm:px-[18px]
 
-    shadow-[0_4px_12px_rgba(0,0,0,0.15)]
+                    shadow-[0_4px_12px_rgba(0,0,0,0.15)]
 
-    active:scale-[0.99]
-    transition
+                    active:scale-[0.99]
+                    transition
 
-    flex-shrink-0
-    mt-5
-  "
->
-  {/* MESSAGE ICON */}
-  <svg
-    viewBox="0 0 24 24"
-    className="
-      w-[21px]
-      h-[21px]
-      sm:w-[23px]
-      sm:h-[23px]
-      flex-shrink-0
-    "
-    fill="white"
-  >
-    <path d="M12 3C6.48 3 2 6.58 2 11c0 2.45 1.38 4.63 3.58 6.08L4.5 21l4.05-2.03c1.08.33 2.23.5 3.45.5 5.52 0 10-3.58 10-8.47C22 6.58 17.52 3 12 3Z" />
-  </svg>
+                    flex-shrink-0
+                    mt-5
+                    cursor-pointer
+                  "
+                >
+                  {/* MESSAGE ICON */}
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="
+                      w-[21px]
+                      h-[21px]
+                      sm:w-[23px]
+                      sm:h-[23px]
+                      flex-shrink-0
+                    "
+                    fill="white"
+                  >
+                    <path d="M12 3C6.48 3 2 6.58 2 11c0 2.45 1.38 4.63 3.58 6.08L4.5 21l4.05-2.03c1.08.33 2.23.5 3.45.5 5.52 0 10-3.58 10-8.47C22 6.58 17.52 3 12 3Z" />
+                  </svg>
 
-  {/* TEXT */}
-  <span
-    className="
-      flex-1
-      text-center
-      text-[14px]
-      sm:text-[16px]
-      font-bold
-    "
-  >
-    Chat on WhatsApp
-  </span>
+                  {/* TEXT */}
+                  <span
+                    className="
+                      flex-1
+                      text-center
+                      text-[14px]
+                      sm:text-[16px]
+                      font-bold
+                    "
+                  >
+                    Chat on WhatsApp
+                  </span>
 
-  {/* ARROW */}
-  <span
-    className="
-      text-[20px]
-      sm:text-[23px]
-      font-medium
-      leading-none
-    "
-  >
-    →
-  </span>
-</button>
+                  {/* ARROW */}
+                  <span
+                    className="
+                      text-[20px]
+                      sm:text-[23px]
+                      font-medium
+                      leading-none
+                    "
+                  >
+                    →
+                  </span>
+                </button>
 
               {/* Opens WhatsApp */}
               <div
