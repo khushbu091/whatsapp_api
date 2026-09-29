@@ -4,7 +4,7 @@ import logo from "../assets/logo3.png";
 const WHATSAPP_NUMBER = "447476504525";
 
 const WHATSAPP_MESSAGE =
-  "Hello, I want to contact the support desk.";
+  "Hello, I want New ID Please Send me Details.";
 
 const openWhatsApp = () => {
   const url =
